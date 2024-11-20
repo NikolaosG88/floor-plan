@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poller+One&display=swap');
+
+body {
+    display: grid;
+    background-color: lightgrey;
+    font-family: Itim, sans-serif;
+    font-size: 24px;
+    min-height: 100vh;
+  }
+ 
+div {
+  border: 1px solid black;
+}
+
+.floor-plan {
+  display: grid;
+  grid-template-areas:
+    "bed-1 living-room kitchen"
+    "full-bath living-room kitchen"
+    "bed-2 half-bath bed-3";
+  grid-template-rows: 1.7fr 0.8fr 1.7fr;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
+  height: 100vh;
+}
+
+
+.bedroom {
+  background-color: #0073a8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#bed-1 {
+  grid-area: bed-1;
+}
+
+#bed-2 {
+  grid-area: bed-2;
+}
+
+#bed-3 {
+  grid-area: bed-3;
+}
+
+#bath-Full {
+  grid-area: full-bath;
+  background-color: #669966;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+}
+
+#bath-Half {
+  grid-area: half-bath;
+  background-color: #669966;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.living-room {
+  grid-area: living-room;
+  background-color: #d4b996;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kitchen {
+  grid-area: kitchen;
+  background-color: #ffb347;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.kitchen p {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
+}
+
+.oven {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: #b22222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sink {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: #8b4513;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
